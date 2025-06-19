@@ -15,7 +15,7 @@ formatted_name=$(echo "$name" | sed 's/^\(.\)/\U\1/')
 formatted_type=$(echo "$type" | sed 's/^\(.\)/\U\1/')
 
 # print formatted output
-echo "$formatted_name is of type $formatted_type, weighs $weight_kg kg, and is ${height_m}m tall."
+echo "$formatted_name is of type $formatted_type, weighs ${weight_kg}kg, and is ${height_m}m tall."
 
 
 
