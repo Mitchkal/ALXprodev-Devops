@@ -1,6 +1,7 @@
 #!/bin/bash
 pokemon_list=("pikachu" "bulbasaur" "ivysaur" "venusaur" "charmander" "charmeleon")
 
+mkdir -p pokemon_data
 # Loop throgh each pokemn
 for pokemon in "${pokemon_list[@]}"; do
 
@@ -8,21 +9,34 @@ for pokemon in "${pokemon_list[@]}"; do
 
     OUTPUT_FILE="${pokemon}.json"
 
-    response=$(curl -s -w"%{http_code}" -o $OUTPUT_FILE "$URL")
-    # Save the response to a file and capture the HTTP status code
-    http_status="${response: -3}"
+    attempts=0
+    max_attempts=3
+    success=false
 
-    echo "Fetching data for ${pokemon}..."
+    # Retry logic
+    while [ "$attempts" -lt "$max_attempts" ]; do
+        ((attempts++))
 
-    if [ "$http_status" -eq 200 ]; then
-        # save to pokemon file inside pokemon_data directory
-        mkdir -p pokemon_data
-        mv -f $OUTPUT_FILE pokemon_data/
-        echo "Saved data to pokemon_data/$OUTPUT_FILE"
-    else
-        # log error with timestamp to errors.txt
-        echo "[$(date)] ERROR: Failed to retrieve data for $pokemon. Http Status code ${http_status}" >> errors.txt
+        # Make API call
+        response=$(curl -s -w "%{http_code}" -o "$OUTPUT_FILE" "$URL")
+        # Save the response to a file and capture the HTTP status code
+        http_status="${response: -3}"
 
-        rm -f data.json
+        echo "Attempt $attempts: Fetching data for ${pokemon}..."
+        if [ "$http_status" -eq 200 ]; then
+            
+            mv -f "$OUTPUT_FILE" "pokemon_data/"
+            echo "Success: Saved data to pokemon_data/$OUTPUT_FILE"
+            success=true
+            break
+        else
+            echo "Attempt $attempts failed  for $pokemon (HTTP $http_status)"
+            sleep 1 # Wait before retrying
+        
+        fi
+    done
+    if [ "$success" = false ]; then
+        echo "[$(date)] Error: Failed to retrieve data for $pokemon after $max_attempts attempts. HTTP status code $http_status" >> errors.txt
+        rm -f "$OUTPUT_FILE"
     fi
 done

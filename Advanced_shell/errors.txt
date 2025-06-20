@@ -1,1 +1,24 @@
 [Thu Jun 19 19:35:15 EAT 2025] ERROR: Failed to retrieve data. Http Status code 000
+[Fri Jun 20 14:13:03 EAT 2025] Error: Failed to retrieve data for pikachu after 3 attempts. HTTP status code de}
+[Fri Jun 20 14:13:07 EAT 2025] Error: Failed to retrieve data for bulbasaur after 3 attempts. HTTP status code de}
+[Fri Jun 20 14:13:41 EAT 2025] Error: Failed to retrieve data for pikachu after 3 attempts. HTTP status code de}
+[Fri Jun 20 14:13:45 EAT 2025] Error: Failed to retrieve data for bulbasaur after 3 attempts. HTTP status code de}
+[Fri Jun 20 14:14:16 EAT 2025] Error: Failed to retrieve data for pikachu after 3 attempts. HTTP status code de}
+[Fri Jun 20 14:14:20 EAT 2025] Error: Failed to retrieve data for bulbasaur after 3 attempts. HTTP status code de}
+[Fri Jun 20 14:14:24 EAT 2025] Error: Failed to retrieve data for ivysaur after 3 attempts. HTTP status code de}
+[Fri Jun 20 14:14:30 EAT 2025] Error: Failed to retrieve data for venusaur after 3 attempts. HTTP status code de}
+[Fri Jun 20 14:14:37 EAT 2025] Error: Failed to retrieve data for charmander after 3 attempts. HTTP status code de}
+[Fri Jun 20 14:14:42 EAT 2025] Error: Failed to retrieve data for charmeleon after 3 attempts. HTTP status code de}
+[Fri Jun 20 14:15:56 EAT 2025] Error: Failed to retrieve data for pikachu after 3 attempts. HTTP status code de}
+[Fri Jun 20 14:16:00 EAT 2025] Error: Failed to retrieve data for bulbasaur after 3 attempts. HTTP status code de}
+[Fri Jun 20 14:16:05 EAT 2025] Error: Failed to retrieve data for ivysaur after 3 attempts. HTTP status code de}
+[Fri Jun 20 14:16:08 EAT 2025] Error: Failed to retrieve data for venusaur after 3 attempts. HTTP status code de}
+[Fri Jun 20 14:16:12 EAT 2025] Error: Failed to retrieve data for charmander after 3 attempts. HTTP status code de}
+[Fri Jun 20 14:16:18 EAT 2025] Error: Failed to retrieve data for charmeleon after 3 attempts. HTTP status code de}
+[Fri Jun 20 14:33:58 EAT 2025] Error: Failed to retrieve data for pikachu after 3 attempts. HTTP status code de}
+[Fri Jun 20 14:34:30 EAT 2025] Error: Failed to retrieve data for pikachu after 3 attempts. HTTP status code de}
+[Fri Jun 20 14:34:34 EAT 2025] Error: Failed to retrieve data for bulbasaur after 3 attempts. HTTP status code de}
+[Fri Jun 20 14:34:38 EAT 2025] Error: Failed to retrieve data for ivysaur after 3 attempts. HTTP status code de}
+[Fri Jun 20 14:34:42 EAT 2025] Error: Failed to retrieve data for venusaur after 3 attempts. HTTP status code de}
+[Fri Jun 20 14:34:46 EAT 2025] Error: Failed to retrieve data for charmander after 3 attempts. HTTP status code de}
+[Fri Jun 20 14:34:49 EAT 2025] Error: Failed to retrieve data for charmeleon after 3 attempts. HTTP status code de}
